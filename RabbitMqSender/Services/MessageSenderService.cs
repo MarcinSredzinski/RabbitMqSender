@@ -14,7 +14,7 @@ namespace RabbitMqSender.Services
         public MessageSenderService()
         {
             ConnectionFactory factory = new();
-            factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
+            factory.Uri = new Uri("amqp://guest:guest@host.docker.internal:5672");
             factory.ClientProvidedName = "Rabbit Sender App";
             IConnection connection = factory.CreateConnection();
 
