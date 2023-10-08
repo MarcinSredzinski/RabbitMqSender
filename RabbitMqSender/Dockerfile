@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["RabbitMqSender/RabbitMqSender.csproj", "RabbitMqSender/"]
+COPY ["RabbitMqSender.csproj", "RabbitMqSender/"]
 RUN dotnet restore "RabbitMqSender/RabbitMqSender.csproj"
 COPY . .
 WORKDIR "/src/RabbitMqSender"
